@@ -1,6 +1,6 @@
 SELECT 
     a.artist_name AS artista,
-    al.albun_name AS albums,
+    al.albun_name AS album,
     COUNT(f.follower_id) AS pessoas_seguidoras
 FROM
     Artists a
@@ -9,4 +9,4 @@ FROM
         JOIN
     Followers f ON a.id = f.artist_id
 GROUP BY a.artist_name , al.albun_name
-ORDER BY pessoas_seguidoras DESC , artista , albums;
+ORDER BY pessoas_seguidoras DESC , artista , album;
