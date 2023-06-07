@@ -1,6 +1,6 @@
-SELECT COUNT(DISTINCT Songs.id) AS cancoes,
-       COUNT(DISTINCT Artists.id) AS artistas,
-       COUNT(DISTINCT Albums.id) AS albuns
-FROM Songs
-JOIN Albums ON Songs.album_id = Albums.id
-JOIN Artists ON Albums.artist_id = Artists.id;
+SELECT COUNT(DISTINCT s.id) AS cancoes,
+       COUNT(DISTINCT ar.id) AS artistas,
+       COUNT(DISTINCT al.id) AS albuns
+FROM Songs s
+JOIN Albums al ON s.album_id = al.id
+JOIN Artists ar ON al.artist_id = ar.id;
