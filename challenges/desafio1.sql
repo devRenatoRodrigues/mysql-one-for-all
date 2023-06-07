@@ -25,7 +25,7 @@ CREATE TABLE Artists (
 CREATE TABLE Albums (
     id INT AUTO_INCREMENT PRIMARY KEY,
     artist_id INT,
-    albun_name VARCHAR(255),
+    album_name VARCHAR(255),
     release_year INT,
     FOREIGN KEY (artist_id) REFERENCES Artists(id)
 ) ENGINE = InnoDB;
@@ -58,8 +58,6 @@ CREATE TABLE History (
     FOREIGN KEY (song_id) REFERENCES Songs(id)
 ) ENGINE = InnoDB;
 
-
-
 INSERT INTO Plans (plan_name, plan_value) VALUES
 ('gratuito', 0),
 ('familiar', 7.99),
@@ -87,7 +85,7 @@ INSERT INTO Artists (artist_name) VALUES
 ('Nina Simone');
 
 
-INSERT INTO Albums (artist_id, albun_name, release_year) VALUES
+INSERT INTO Albums (artist_id, album_name, release_year) VALUES
 (1, 'Renaissance', 2022),
 (2, 'Jazz', 1978),
 (2, 'Hot Space', 1982),
@@ -140,4 +138,3 @@ VALUES
     (8, 4, '2012-03-17 14:56:41', 'Don''t Stop Me Now'),
     (9, 9, '2022-02-24 21:14:22', 'The Bard''s Song'),
     (10, 3, '2015-12-13 08:30:22', 'ALIEN SUPERSTAR');
-

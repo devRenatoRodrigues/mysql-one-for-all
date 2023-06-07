@@ -1,5 +1,5 @@
 SELECT 
-    a.artist_name AS artista, al.albun_name AS album
+    a.artist_name AS artista, al.album_name AS album
 FROM
     Artists a
         JOIN
